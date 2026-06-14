@@ -1,11 +1,16 @@
-# Safety-Aware Urban Route Planner
+# Artificial Intelligence Assignments
 
-This repository contains `assignment_01_final_code.py`, a Pygame-based interactive route planner that compares graph search algorithms while accounting for safety, gender, group travel, and time-of-day risk preferences.
+This repository contains multiple AI assignments for the course, including both Assignment 1 and Assignment 2.
 
-## Overview
+---
 
-`assignment_01_final_code.py` simulates an urban map with 22 nodes and weighted edges.
-The application supports:
+## Assignment 1 — Safety-Aware Urban Route Planner
+
+This assignment includes `assignment_01_final_code.py`, a Pygame-based interactive route planner that compares graph search algorithms while accounting for safety, gender, group travel, and time-of-day risk preferences.
+
+### Overview
+
+`assignment_01_final_code.py` simulates an urban map with 22 nodes and weighted edges. The application supports:
 
 - Interactive selection of start and end nodes on a city map
 - Multiple search algorithms:
@@ -27,51 +32,63 @@ The application supports:
 - Visual path and exploration display
 - Algorithm comparison mode
 
-## Requirements
+### Requirements
 
 - Python 3.8+
-- `pygame` library
+- `pygame`
 
-## Installation
+### Installation
 
-Install Pygame with pip:
-
-```bash
-pip install pygame
+```powershell
+python -m pip install pygame
 ```
 
-## Run the application
+### Run
 
-From the repository folder, run:
-
-```bash
+```powershell
 python assignment_01_final_code.py
 ```
 
-## Controls
-
-- Click a node on the map to select the start point
-- Click a second node to select the end point
-- Use the right-hand panel to choose:
-  - traveler gender
-  - solo or group travel
-  - day or night conditions
-  - safe or risky route priority
-  - search algorithm
-- Click `RUN SEARCH` to compute and display the path
-- Toggle `Compare All Algorithms` to view algorithm comparison results
-- Click `Reset` to clear the current selection
-
-## Notes
+### Notes
 
 - The risk model multiplies base edge risk by gender, group, and time factors.
-- The safe mode places heavier weight on risk, while the risky mode emphasizes shorter and faster routes.
+- Safe mode places heavier weight on risk, while risky mode emphasizes shorter and faster routes.
 - The visualization includes path highlighting, explored nodes, and edge risk coloring.
 
-## File
+---
 
-- `assignment_01_final_code.py` — main application script
+## Assignment 2 — Fuel Crisis CSP
 
-## License
+This assignment includes `assignment_02.py`, a Streamlit-based fuel crisis CSP simulation, and the report file `Assignment_2_Fuel_Crisis_CSP_report.docx`.
 
-This repository is intended for academic assignment use and demonstration.
+### Files included
+
+- `assignment_02.py`
+- `README.md`
+- `Assignment_2_Fuel_Crisis_CSP_report.docx`
+
+### Description
+
+The project models a Dhaka fuel crisis with a QR-based fuel pass system. It includes a simulation of vehicles, fuel stations, capacity constraints, and scheduling.
+
+### Run instructions
+
+1. Activate the Python virtual environment:
+   ```powershell
+   .\.venv\Scripts\Activate.ps1
+   ```
+2. Install required packages if needed:
+   ```powershell
+   python -m pip install --upgrade pip
+   python -m pip install streamlit plotly pandas folium streamlit-folium
+   ```
+3. Run the Streamlit app:
+   ```powershell
+   python -m streamlit run u.py
+   ```
+
+### Notes
+
+- If `streamlit` is not found, use `python -m streamlit run u.py`.
+- The app may require OSM data downloads on first run.
+
